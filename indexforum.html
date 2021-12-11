@@ -1,0 +1,96 @@
+
+    
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <h2>Bun venit pe forumul Digital Deal!<h1></h1>
+        <img src="LogoDigitalDealBlue.png" alt="Girl in a jacket" width="150" height="150">
+
+    </h2>
+
+
+<p>Portalul Digital Deal este dedicat </p>
+
+<p>The img element is required as the last child tag of the picture declaration block.
+The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+</p>
+
+<p><strong>Note:</strong> The picture element is not supported in IE12 and earlier or Safari 9.0 and earlier.</p>
+    
+
+ <br />
+    <strong> Aici poți să vorbești cu studenți din toată țara.</strong> <br />
+    <em> Primul Chat este dedicat informațiilor generale ( de exemplu să vorbiți despre experiențele pe care le-ați avut cu Digital Deal ) și cel de-al doilea Chat este dedicat strict formării unei echipe. Dacă ești dornic să participi la un concurs și nu ai echipă intră în cel de-al doilea room crează-ți echipa mult dorită!</em> <br />
+ 
+    <div class="top-bar">
+       <strong <p style="color:white"> Lista de chat-uri </p></strong>
+
+    </div>
+    <div class="main">
+        <ol>
+        </ol>
+    </div>
+    
+
+    <script src="forum.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/chaturiforum.html?${thread.id}">
+                    <h4 class="title">
+                        Chat
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comentarii
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+    <style>
+        body {
+            margin: 10px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: #2f54eb;
+            padding: 0 40px;
+        }
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+    </style>
+     
+</body>
